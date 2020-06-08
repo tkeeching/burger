@@ -1,0 +1,42 @@
+.Counter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  place-items: center;
+}
+
+.Counter .counter-display {
+  font-size: 2rem;
+}
+
+.Counter button {
+  border: 1px dashed gray;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background: none;
+  font-size: 1.5rem;
+}
+
+.Counter button:hover {
+  background-color: #B5EAD7;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+}
+
+.Counter button:focus {
+  outline: none;
+}
+
+.Counter output {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.Counter p {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  width: 150px;
+}

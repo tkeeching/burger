@@ -1,38 +1,237 @@
-.App {
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100vh;
+}
+
+aside {
+  background-color: #B5EAD7;
+}
+
+aside h2 {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  background-color: #FFFFD8;
+}
+
+.counter-wrapper {
+  display: grid;
+  justify-items: center;
+  padding: 20px;
+  margin: 30px 100px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.special-wrapper {
+  margin-top: 50px;
+}
+
+.special-wrapper div {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 30px 100px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.special-wrapper div button {
+  font-size: 1.3rem;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: 
+    linear-gradient(
+      to right, 
+      #B5EAD7 0%,
+      #B5EAD7 100%
+    );
+  background-position: left;
+  background-size: 0 0 ;
+  background-repeat: repeat-y;
+  transition: all 0.3s ease-out;
+}
+
+.special-wrapper div button:hover{
+  cursor: pointer;
+  background-size: 100% 1px;
+}
+
+.special-wrapper div button:focus{
+  outline: none;
+}
+
+.cheese-level {
+  padding: 0 200px;
+  margin: 50px;
+  height: 50px;
+  font-size: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App main section {
+  display: grid;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.burger-wrapper {
+  display: grid;
+  align-items: end;
+  grid-template-rows: 1fr;
+  padding: 0 35%;
+  height: 80vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.plate {
+  height: 30px;
+  background:
+    linear-gradient(
+      to bottom,
+      lightgray 0%,
+      gray 100%
+    );
+  width: 60%;
+  margin: 0 auto;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.cheese {
+  background-color: yellow;
+  height: 8px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.cheese:before {
+  content: '';
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: yellow;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 5rem;
+  top: 0.2rem;
+}
+
+.cheese:hover {
+  cursor: pointer;
+  animation: slide 0.5s both;
+}
+
+@keyframes slide {
+  100% {transform: translate(50px);}
+}
+
+.tomato {
+  background-color: tomato;
+  height: 20px;
+  border-radius: 10px;
+  box-shadow: -25px 0 rgb(219, 82, 58) inset;
+}
+
+.tomato:hover {
+  cursor: pointer;
+  animation: slide 0.5s both;
+}
+
+.patty {
+  background: 
+    linear-gradient(
+      to bottom, 
+      brown 0%,
+      rgb(129, 34, 34) 100%
+    );
+  height: 35px;
+  border-radius: 5px;
+  box-shadow: -25px 0 rgb(129, 34, 34) inset;
+}
+
+.patty:hover {
+  cursor: pointer;
+  animation: pull 0.5s both;
+}
+
+@keyframes pull {
+  100% {transform: translate(-80px);}
+}
+
+.bunTop {
+  background-color: gold;
+  height: 120px;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: -25px 3px goldenrod inset;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.bunTop:before {
+  content: '';
+  width: 0.3rem;
+  height: 0.6rem;
+  background-color: lemonchiffon;
+  border-radius: 90%;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 2rem;
+  left: 8rem;
+}
+
+.bunTop:after {
+  content: '';
+  width: 0.3rem;
+  height: 0.6rem;
+  background-color: lemonchiffon;
+  border-radius: 90%;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 3rem;
+  right: 8rem;
+}
+
+.bunTop:hover {
+  cursor: pointer;
+  animation: lift 0.3s both;
+}
+
+@keyframes lift {
+  0% {transform: translate(5px, -10px);}
+  100% {transform: translate(20px, -30px);}
+}
+
+.bunBottom {
+  background-color: gold;
+  height: 90px;
+  border-radius: 10px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: -25px -5px goldenrod inset;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+.bunBottom:hover {
+  cursor: pointer;
+  animation: pull 0.3s both;
+}
+
+.container .price-wrapper {
   display: flex;
+  padding: 20px;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .price-wrapper h3 {
+  font-size: 1.5rem;
+  background-color: #fff;
+  margin: 10px 80px;
+  padding: 20px;
+  border-radius: 10px;
 }
