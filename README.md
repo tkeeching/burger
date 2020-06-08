@@ -1,3 +1,18 @@
+## burger
+This project was part of a practice exercise during my Software Engineering Immersive course.
+The aim was to practise state management and componentization in React.
+
+Users can add toppings of their own using the individual add buttons as well as select ready made
+burger from the menu. The toppings can be removed by clicking on them.
+
+Build your burger [HERE](https://tkeeching.github.io/burger/)
+
+<a href="https://tkeeching.github.io/burger/" target="_blank">
+  <img src="./screenshot.png" alt="screenhot">
+</a>
+
+## 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
